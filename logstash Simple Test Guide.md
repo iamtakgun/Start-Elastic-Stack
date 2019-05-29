@@ -2,10 +2,10 @@
 	
 	vi logstash-test1.conf
 	input {
-    	  stdin{}
+	  stdin{}
 	}
 	output {
-    	  stdout{}
+	  stdout{}
 	}
 	
 	bin/logstash -f logstash-test1.conf
