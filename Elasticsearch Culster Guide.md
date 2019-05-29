@@ -116,3 +116,11 @@ segment 를 강제로 병합 API
 인덱싱이 끝난 인덱스는 하나의 segment 로 merge
 
      POST /_forcemerge?max_num_segments=1
+
+# Index open/close
+close 인덱스는 read/write 불가
+클러스터 전체 샤드에서 제외
+라우팅 disabled
+
+     POST twitter/_close
+     POST twitter/_open
