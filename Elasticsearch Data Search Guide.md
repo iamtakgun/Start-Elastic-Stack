@@ -1,14 +1,17 @@
 ## javabooks 인덱스, _doc 타입에서 Schildt 검색
 
-  GET /javabooks/_doc/_search?q=Schildt
+    GET /javabooks/_doc/_search?q=Schildt
 
-# javabooks 인덱스 Schildt 검색
-GET /javabooks/_search?q=Schildt
+## javabooks 인덱스 Schildt 검색
 
-# Multi-Tenancy는 여러 index에서 동시 검색 기능
-# index,index로 표시
-# javabooks, pythonbooks 인덱스에서 Beginner 검색
-GET /javabooks,pythonbooks/_search?q=Beginner
+    GET /javabooks/_search?q=Schildt
+
+## Multi-Tenancy는 여러 index에서 동시 검색 기능
+
+    index,index로 표시
+    javabooks, pythonbooks 인덱스에서 Beginner 검색
+
+    GET /javabooks,pythonbooks/_search?q=Beginner
 
 # 인덱스 지정을 생략, 전체 인덱스에서 Beginner 검색
 GET /_search?q=Beginner
