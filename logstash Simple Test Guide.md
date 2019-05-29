@@ -24,7 +24,7 @@
 	}
 
 	output {
-    	  stdout{}
+	  stdout{}
 	}
 	
 	bin/logstash -f logstash-test2.conf
