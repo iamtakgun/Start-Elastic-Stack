@@ -31,6 +31,9 @@
 
 ## Logstash start/stop
 
+	OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+	
+	
 	echo 'bin/elasticsearch -d -p es.pid' > start.sh
 	echo 'kill -s kill `cat es.pid`' > stop.sh
 	chmod 755 start.sh stop.sh
