@@ -14,7 +14,7 @@
      
      GET _cluster/state
      
-     "version" : 347,  : Version 이 가장 낮은 Node가 Master Node 다운 시 다른 Master 선정할 때
+     "version" : 347,  **Version 이 가장 낮은 Node가 Master Node 다운 시 다른 Master 선정할 때
 
 ## Node
      
