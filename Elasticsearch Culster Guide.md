@@ -8,7 +8,7 @@
      "active_primary_shards" : 5,
      "active_shards" : 10,
      
-# 물리 상태(config에 의한)
+# 설정 기준 정보
 
 ## Cluster
      
@@ -31,9 +31,3 @@
      GET _nodes/_local
      
      "os", "process", "jvm", "thread_pool", "settings"(elasticsearch.yml 설정)
-     
-# 실시간 상태
-
-## Cluster
-
-     GET _cluster/stats
