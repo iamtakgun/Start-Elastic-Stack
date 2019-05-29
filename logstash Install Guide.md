@@ -29,9 +29,9 @@
 	wget https://artifacts.elastic.co/downloads/logstash/logstash-6.7.2.tar.gz
   	tar -zxvf logstash-6.7.2.tar.gz
 
-## Logstash simple test
+## Logstash logstash-test1.conf test
 	
-	vi simple.conf
+	vi logstash-test1.conf
 	input {
     	  stdin{}
 	}
@@ -39,6 +39,7 @@
     	  stdout{}
 	}
 	
+	bin/logstast -f logstash-test1.conf
 	
 ## Logstash Check
 
