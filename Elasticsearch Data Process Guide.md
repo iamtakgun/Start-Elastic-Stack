@@ -123,11 +123,11 @@
      { "index" : { "_id" : "1" } }
      { "title" : "Elasticsearch", "teacher" : "Tak", "hour" : 8 } 
      { "index" : {  "_id" : "2" } } 
-     { "title" : "Logstash and beats", "author" : "Tak", "hour" : 4}
+     { "title" : "Logstash and beats", "teacher" : "Tak", "hour" : 4}
 
 ## _bulk 복합 설정
 
      POST /lectures/lecture/_bulk
      { "delete" : { "_id" : "1" } }
      { "update" : {  "_id" : "2" } } 
-     { "doc" : {"title":"Elasticsearch, Logstash and beats", "author" : "Tak", "hour" : 12}}
+     { "doc" : {"title":"Elasticsearch, Logstash and beats", "teacher" : "Tak", "hour" : 12}}
