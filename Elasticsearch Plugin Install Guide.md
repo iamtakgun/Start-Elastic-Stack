@@ -33,9 +33,17 @@
 	sudo apt-get update
     sudo apt-get install python3 python3-pip
     
-## HQ Download/
+## HQ Download/install
 
 	git clone https://github.com/ElasticHQ/elasticsearch-HQ.git
 	cd elasticsearch-HQ
-    sudo pip3 install -r requirements.txt
+        sudo pip3 install -r requirements.txt
 
+## HQ Start
+
+	python3 application.py &
+
+## HQ Check
+
+	netstat -na | grep 5000
+	http://{Server FQDN}:5000
