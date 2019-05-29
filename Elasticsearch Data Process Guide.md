@@ -4,81 +4,74 @@
 
      PUT /twitter
 
-# index 확인
+## index 확인
 
      GET /twitter
 
-# Green이 아니라 왜 Yellow 일까? 
-      PUT /twitter/_settings
-      {
-        "settings": {
-          "index": {
-            "number_of_replicas": 0
-          }
-        }
-      }
+## document 생성
 
-# document 생성
-PUT /twitter/_doc/1
-{
-    "user" : "kimchy",
-    "post_date" : "2019-05-26T19:39:00",
-    "message" : "trying out Elasticsearch"
-}
+     PUT /twitter/_doc/1
+     {
+         "user" : "kimchy",
+         "post_date" : "2019-05-26T19:39:00",
+         "message" : "trying out Elasticsearch"
+     }
 
-#op_type으로 같은 ID가 있으면 강제 Error
-PUT /twitter/_doc/1?op_type=create
-{
-    "user" : "kimchy",
-    "post_date" : "2019-05-27T14:00:00",
-    "message" : "trying out Elasticsearch"
-}
+## op_type으로 같은 ID가 있으면 강제 ERROR
 
-# document 조회
-GET /twitter/_doc/1
+     PUT /twitter/_doc/1?op_type=create
+     {
+         "user" : "kimchy",
+         "post_date" : "2019-05-27T14:00:00",
+         "message" : "trying out Elasticsearch"
+     }
+
+## document 조회
+
+     GET /twitter/_doc/1
 
 
-# ID 지정 없이 document 생성
-#"error": "Incorrect HTTP method for uri [/twitter/_doc?pretty] and method [PUT], allowed: [POST]",
-#"status": 405
-PUT /twitter/_doc
-{
-    "user" : "kimchy",
-    "post_date" : "2019-05-26T19:39:00",
-    "message" : "trying out Elasticsearch"
-}
+## ID 지정 없이 document 생성
 
-POST /twitter/_doc
-{
-    "user" : "kimchy",
-    "post_date" : "2019-05-26T19:39:00",
-    "message" : "trying out Elasticsearch"
-}
+     PUT /twitter/_doc
+     {
+         "user" : "kimchy",
+         "post_date" : "2019-05-26T19:39:00",
+         "message" : "trying out Elasticsearch"
+     }
+     
+     "error": "Incorrect HTTP method for uri [/twitter/_doc?pretty] and method [PUT], allowed: [POST]","status": 405
 
-# document 조회
-GET /twitter/_doc/_search?q=kimchy
+## document 조회 "kimchy"
 
-# document 변경
-POST /twitter/_doc/1/_update
-{
-  "doc" : {
-    "message" : "learn Elastic Stack"
-  }
-}
-# document 변경 확인
-GET /twitter/_doc/1
+     GET /twitter/_doc/_search?q=kimchy
 
-# 스냅샷 생성
-# repository를 생성한다.
-# elasticsearch.yml에 먼저 path.repo: [""] 설정
-PUT /_snapshot/my_backup
-{
-  "type": "fs",
-  "settings": {
-      "compress": true,
-      "location": "/home/elasticsearch/elastic/backup"
-  }
-}
+## document 변경
+
+     POST /twitter/_doc/1/_update
+     {
+       "doc" : {
+         "message" : "learn Elastic Stack"
+       }
+     }
+     
+## document 변경 확인
+
+     GET /twitter/_doc/1
+
+## 스냅샷 생성
+
+     repository를 생성한다.
+     elasticsearch.yml에 먼저 path.repo: [""] 설정
+     
+     PUT /_snapshot/my_backup
+     {
+       "type": "fs",
+       "settings": {
+           "compress": true,
+           "location": "/home/elasticsearch/elastic/backup"
+       }
+     }
 
 #스냅샷을 실행한다.
 PUT _snapshot/my_backup/111_20190527
