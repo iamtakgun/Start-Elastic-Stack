@@ -14,7 +14,7 @@
 
 	vi logstash-test2.conf
 	input {
-    	  file {
+ 	  file {
             path => "/home/logst/logstash/echo.txt"
             start_position => "beginning"
     	  }
