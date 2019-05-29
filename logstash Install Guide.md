@@ -11,16 +11,16 @@
 	sudo vi /etc/sudoers
 	logst   ALL=(ALL:ALL) ALL
 	
-## JAVA Download/Unzip : Oracle JDK8
-
-	wget https://d3pxv6yz143wms.cloudfront.net/11.0.3.7.1/amazon-corretto-11.0.3.7.1-linux-x64.tar.gz
-	tar -xzvf amazon-corretto-11.0.3.7.1-linux-x64.tar.gz
-	amazon-corretto-11.0.3.7.1-linux-x64/bin/java -version
-
+## JAVA Download/Unzip : Open JDK8
+	
+	sudo apt-get install unzip
+	unzip jdk-8u212-ojdkbuild-linux-x64.zip
+	mv jdk-8u212-ojdkbuild-linux-x64 jdk8
+	
 ## JAVA_HOME 설정
 
 	vi .profile
-	export JAVA_HOME=~/amazon-corretto-11.0.3.7.1-linux-x64
+	export JAVA_HOME=~/jdk8
 	
 	$JAVA_HOME/bin/java -version
 
