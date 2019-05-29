@@ -1,7 +1,7 @@
 
 ## Logstash Start
 
-    bin/logstash –f ./sincedb_test.conf --config.reload.automatic
+    bin/logstash –f ./logstash-apache.conf --config.reload.automatic
     
     * --config.reload.automatic : 재기동 없이 conf 반영 
 
