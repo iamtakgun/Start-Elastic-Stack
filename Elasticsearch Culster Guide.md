@@ -138,3 +138,32 @@ close 인덱스는 read/write 불가
 
      POST twitter/_close
      POST twitter/_open
+
+
+# Hot-data / Warm-data
+
+## 각 노드가 Hot/Warm 중 무억으로 운영 할지 설정
+
+     config/elasticsearch.yml 
+
+     #hotdata node 
+     node.attr.box_type: hot/warm
+
+## 모든 Index를 hot으로 설정
+
+     PUT _template/hottemplate 
+     { 
+        "index_patterns": ["*"], 
+        "order" : 0, 
+        "settings": { 
+           "number_of_shards": 0, 
+           "index.routing.allocation.require.box_type" : "hot" 
+        } 
+     }
+
+## Index 별로 warm 설정
+
+     PUT test/_settings 
+     { 
+       "index.routing.allocation.require.box_type" : "warm" 
+     }
