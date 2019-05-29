@@ -8,10 +8,28 @@
     	  stdout{}
 	}
 	
-	bin/logstast -f logstash-test1.conf
+	bin/logstash -f logstash-test1.conf
 	
-## Logstash Check
+## Logstash logstash-test2.conf
 
-	curl http://localhost:9200
-	ps -ef | grep java
-	netstat -na | grep LISTEN | grep 9200
+	vi logstash-test2.conf
+	input {
+    	  file {
+            path => "/home/logst/logstash/echo.txt"
+            start_position => "beginning"
+    	  }
+	}
+	
+	filter {
+	}
+
+	output {
+    	  stdout{}
+	}
+	
+	bin/logstash -f logstash-test2.conf
+	
+	echo 'Hello Elasticsearch' > echo.txt
+	echo 'Hello Logstash' > echo.txt
+	echo 'Hello Kibana' > echo.txt
+	echo 'Hello Beats' > echo.txt
