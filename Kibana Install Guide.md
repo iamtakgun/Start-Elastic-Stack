@@ -14,7 +14,7 @@
   
   ps -ef | grep kibana
   netstat -na | grep LISTEN | grep 5601
-	http://localhost:5601
+  http://localhost:5601
 
 ## Kibana Stop
   
