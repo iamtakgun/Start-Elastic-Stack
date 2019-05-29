@@ -36,6 +36,5 @@
 
 Console 출력 기반 API
 
-GET _cat 로 사용 가능 명령어 확인.
-
+     GET _cat
      GET _cat/master?v
