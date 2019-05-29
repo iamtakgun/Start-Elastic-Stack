@@ -31,4 +31,4 @@
 
 	curl http://localhost:9200
 	ps -ef | grep java
-        netstat -na | grep LISTEN | grep 9200
+	netstat -na | grep LISTEN | grep 9200
