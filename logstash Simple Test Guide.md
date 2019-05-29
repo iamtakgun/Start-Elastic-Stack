@@ -14,10 +14,10 @@
 
 	vi logstash-test2.conf
 	input {
- 	  file {
-            path => "/home/logst/logstash/echo.txt"
-            start_position => "beginning"
-    	  }
+	  file {
+	    path => "/home/logst/logstash/echo.txt"
+	    start_position => "beginning"
+	  }
 	}
 	
 	filter {
