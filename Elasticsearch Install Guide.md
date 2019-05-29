@@ -10,12 +10,17 @@
 	sudo vi /etc/sudoers
 	elas   ALL=(ALL:ALL) ALL
 	
-## JAVA 설치 : OpenJDK11
+## JAVA Download/Unzip : OpenJDK11
 
 	wget https://d3pxv6yz143wms.cloudfront.net/11.0.3.7.1/amazon-corretto-11.0.3.7.1-linux-x64.tar.gz
 	tar -xzvf amazon-corretto-11.0.3.7.1-linux-x64.tar.gz
 	amazon-corretto-11.0.3.7.1-linux-x64/bin/java -version
-	
+
+## JAVA_HOME 설정
+
+	vi .profile
+	export HAVA_HOME=~/amazon-corretto-11.0.3.7.1-linux-x64
+
 ## Elasticsearch Install
 
 	wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.7.2.tar.gz
