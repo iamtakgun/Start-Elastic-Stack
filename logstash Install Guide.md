@@ -11,7 +11,7 @@
 	sudo vi /etc/sudoers
 	logst   ALL=(ALL:ALL) ALL
 	
-## JAVA Download/Unzip : OpenJDK11
+## JAVA Download/Unzip : Oracle JDK8
 
 	wget https://d3pxv6yz143wms.cloudfront.net/11.0.3.7.1/amazon-corretto-11.0.3.7.1-linux-x64.tar.gz
 	tar -xzvf amazon-corretto-11.0.3.7.1-linux-x64.tar.gz
@@ -30,9 +30,10 @@
   	tar -zxvf logstash-6.7.2.tar.gz
 
 ## Logstash start/stop
-
-	OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
 	
+	logstash/config/jvm.options
+	-XX:+UseG1GC
+	-XX:InitiatingHeapOccupancyPercent=75
 	
 	echo 'bin/elasticsearch -d -p es.pid' > start.sh
 	echo 'kill -s kill `cat es.pid`' > stop.sh
