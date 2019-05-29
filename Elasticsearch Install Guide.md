@@ -20,6 +20,8 @@
 
 	vi .profile
 	export HAVA_HOME=~/amazon-corretto-11.0.3.7.1-linux-x64
+	
+	$JAVA_HOME/bin/java -version
 
 ## Elasticsearch Install
 
