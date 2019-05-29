@@ -32,4 +32,14 @@
         source => "clientip"
       }
     }
-    
+
+## logstash-apache.conf output config
+
+    output {
+        elasticsearch{
+            hosts => ["localhost:9200"]
+            index => "apache-access-logstash-%{+yyyy.MM.dd}"
+        }
+        
+        stdout{}
+    }
