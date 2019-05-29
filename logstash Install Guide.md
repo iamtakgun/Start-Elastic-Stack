@@ -32,13 +32,12 @@
 ## Logstash simple test
 	
 	vi simple.conf
-	
-		input {
-    			stdin{ }
-		}
-		output {
-    			stdout{ }
-		}
+	input {
+    	  stdin{}
+	}
+	output {
+    	  stdout{}
+	}
 	
 	
 ## Logstash Check
