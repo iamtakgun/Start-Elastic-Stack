@@ -38,3 +38,26 @@ Console 출력 기반 API
 
      GET _cat
      GET _cat/master?v
+
+
+# Rolling Restart
+
+장애 아닌 상황에서 재기동 시 샤드 재분배로 인해 생기는 부하 고려
+
+     PUT _cluster/settings
+     {
+          "transient" : {
+               "cluster.routing.allocation.enable" : "none"
+          }
+     }
+     
+     Elasticsearch restart
+     
+     PUT _cluster/settings
+     {
+          "transient" : {
+               "cluster.routing.allocation.enable" : null
+          }
+     }
+  
+     
