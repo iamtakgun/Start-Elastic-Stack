@@ -131,3 +131,27 @@
      { "delete" : { "_id" : "1" } }
      { "update" : {  "_id" : "2" } } 
      { "doc" : {"title":"Elasticsearch, Logstash and beats", "teacher" : "Tak", "hour" : 12}}
+
+## 외부 데이터 파일
+
+     vi learn_1
+     { 
+        "title" : "logging system with Elastic Stack", 
+        "teacher" : "Tak", 
+        "date" : "2019-05-19", 
+        "hour" : 16 
+     }
+
+     curl -XPUT localhost:9200/lecture/_doc/_bulk?pretty -H 'Content-Type: application/json' --data-binary @learn_1
+
+     Bulkfile는 binary로 해야 한다. 데이터 옵션을 -d가 아닌 --data-binary로
+
+## 외부 데이터 파일 + _bulk
+
+     curl -XPUT localhost:9200/javabooks/_doc/_bulk?pretty -H 'Content-Type: application/json' --data-binary @javaBook
+     curl -XPUT localhost:9200/pythonbooks/_doc/_bulk?pretty -H 'Content-Type: application/json' --data-binary @pythonBooks
+
+## _bulk로 생성한 인덱스 확인
+
+     GET /javabooks
+     GET /pythonbooks
