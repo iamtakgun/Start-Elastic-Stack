@@ -40,7 +40,7 @@
          "message" : "trying out Elasticsearch"
      }
      
-     "error": "Incorrect HTTP method for uri [/twitter/_doc?pretty] and method [PUT], allowed: [POST]","status": 405
+     "error": "Incorrect HTTP method for uri [/twitter/_doc?pretty] and method [PUT], allowed:[POST]","status":405
 
 ## document 조회 "kimchy"
 
