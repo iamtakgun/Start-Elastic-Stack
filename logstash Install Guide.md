@@ -27,7 +27,7 @@
 ## Logstash Install
 
 	wget https://artifacts.elastic.co/downloads/logstash/logstash-6.7.2.tar.gz
-  tar -zxvf logstash-6.7.2.tar.gz
+  	tar -zxvf logstash-6.7.2.tar.gz
 
 ## Logstash start/stop
 
