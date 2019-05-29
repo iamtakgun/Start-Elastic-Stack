@@ -8,7 +8,7 @@
      "active_primary_shards" : 5,
      "active_shards" : 10,
      
-# 설정 기준 정보
+# 설정 기준의 정보
 
 ## Cluster
      
@@ -31,3 +31,11 @@
      GET _nodes/_local
      
      "os", "process", "jvm", "thread_pool", "settings"(elasticsearch.yml 설정)
+
+# Cat API
+
+Console 출력 기반 API
+
+GET _cat 로 사용 가능 명령어 확인.
+
+     GET _cat/master?v
