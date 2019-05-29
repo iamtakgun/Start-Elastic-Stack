@@ -78,3 +78,14 @@
     {
         "_source": ["title","beg*"]
     }
+
+## Delete By Query로 document 삭제
+
+    POST /javabooks/_delete_by_query
+    {
+      "query": {
+        "term": {
+            "author" : "schildt"
+        }
+      }
+    }
