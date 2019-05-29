@@ -18,3 +18,24 @@
     
     netstat na | grep 9100
     http://{Server FQDN}:9100
+
+## check Point
+
+    *elasticsearch.yml*
+    
+    http.cors.enabled: true
+    http.cors.allow-origin: "*"
+    
+# HQ 플러그인 - 클러스터 지표를 보기 위한 도구
+
+## python3 Update
+
+	sudo apt-get update
+    sudo apt-get install python3 python3-pip
+    
+## HQ Download/
+
+	git clone https://github.com/ElasticHQ/elasticsearch-HQ.git
+	cd elasticsearch-HQ
+    sudo pip3 install -r requirements.txt
+
