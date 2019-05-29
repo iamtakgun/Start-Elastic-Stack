@@ -7,9 +7,8 @@
 
 ## Kibana Start
   
-  cd kibana-6.7.2-linux-x86_64
-  
-  bin/kibana &
+  	cd kibana-6.7.2-linux-x86_64
+  	bin/kibana &
   
 ## Kibana Check
   
