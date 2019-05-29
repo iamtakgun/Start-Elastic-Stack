@@ -29,16 +29,18 @@
 	wget https://artifacts.elastic.co/downloads/logstash/logstash-6.7.2.tar.gz
   	tar -zxvf logstash-6.7.2.tar.gz
 
-## Logstash start/stop
+## Logstash simple test
 	
-	logstash/config/jvm.options
-	-XX:+UseG1GC
-	-XX:InitiatingHeapOccupancyPercent=75
+	vi simple.conf
 	
-	echo 'bin/elasticsearch -d -p es.pid' > start.sh
-	echo 'kill -s kill `cat es.pid`' > stop.sh
-	chmod 755 start.sh stop.sh
-
+		input {
+    			stdin{ }
+		}
+		output {
+    			stdout{ }
+		}
+	
+	
 ## Logstash Check
 
 	curl http://localhost:9200
