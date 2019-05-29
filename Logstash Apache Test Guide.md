@@ -32,7 +32,9 @@
         source => "clientip"
       }
     }
-
+    
+    * geoip : Geolite2 City DBMS(Maxmind Product)
+    
 ## logstash-apache.conf output config
 
     output {
