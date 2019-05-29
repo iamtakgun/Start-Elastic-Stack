@@ -100,6 +100,20 @@ commit point 를 생성하는 주기
           }
      }
 
+# Reindex
+
+인덱스를 복사하는 API
+
+     POST _reindex
+     {
+       "source" {
+         "index": "twitter"
+       },
+       "dest": {
+         "index": "twitter1"
+       }
+     }
+
 # aliases
 
 인덱스에 별칭을 부여하는 API
@@ -107,7 +121,7 @@ commit point 를 생성하는 주기
      POST /_aliases
      {
           "actions": [
-               { "add": { "indices": ["titter1", "titter2"], "alias":"titter" } }
+               { "add": { "indices": ["twitter", "twitter1"], "alias":"twitters" } }
           ]
      }
 
