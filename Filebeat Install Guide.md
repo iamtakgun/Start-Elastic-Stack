@@ -30,9 +30,10 @@
 	    # Filebeat will choose the paths depending on your OS.
 	    #var.paths:
   
-  cd ..
-  
-  vi filebeat.yml
+	  cd ..
+
+	  vi filebeat.yml
+	  
 	  # Kibana
 	  host: "localhost:5601"
   
