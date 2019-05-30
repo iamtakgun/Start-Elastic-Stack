@@ -4,7 +4,7 @@
 ## Filebeat Install
 
 	wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.7.2-linux-x86_64.tar.gz
-  tar -zxvf filebeat-6.7.2-linux-x86_64.tar.gz
+  	tar -zxvf filebeat-6.7.2-linux-x86_64.tar.gz
 
 ## Filebeat modules.d use
 
