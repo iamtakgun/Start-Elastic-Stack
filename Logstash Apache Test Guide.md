@@ -1,4 +1,17 @@
 
+## Apache Access Log Download
+
+    cd /home/elas/logstash6
+    
+    wget https://github.com/iamtakgun/Start-Elastic-Stack/raw/master/sample/logs.gz
+    wget https://github.com/iamtakgun/Start-Elastic-Stack/raw/master/sample/logs2.gz
+    
+    gzip -d logs.gz
+    gzip -d logs2.gz
+    
+    mv logs apache-access.log
+    mv logs apache-access2.log
+    
 ## Logstash Start
 
     bin/logstash –f ./logstash-apache.conf --config.reload.automatic
