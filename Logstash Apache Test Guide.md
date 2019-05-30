@@ -124,3 +124,8 @@
         
         stdout{}
     }
+    
+## kibana에서 데이터 확인
+
+    GET apache-*/_count
+    
