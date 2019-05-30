@@ -124,6 +124,11 @@
         stdout{}
     }
     
+## logstash-apache.conf access log 
+    
+    #path => "/home/elas/log_data/apache-sample.log"
+    path => "/home/elas/log_data/apache-access.log"
+    
 ## kibana에서 데이터 확인
 
     GET apache-*/_count
