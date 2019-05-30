@@ -36,7 +36,65 @@
     
     * --config.reload.automatic : 재기동 없이 conf 반영 
     
-## logstash-apache.conf filter config
+## logstash-apache.conf filter +grok config
+
+    filter {
+      grok {
+        match => { "message" => "%{HTTPD_COMBINEDLOG}"}
+      }
+    }
+
+## logstash-apache.conf filter +mutate remove_field config
+
+    filter {
+      grok {
+        match => { "message" => "%{HTTPD_COMBINEDLOG}"}
+      }
+  
+      mutate{
+        remove_field => [ "auth", "ident" ]
+      }
+  
+      date{
+        match => ["timestamp","dd/MMM/yyyy:HH:mm:SS Z"]
+        target => "timestamp"
+      }
+    }
+    
+## logstash-apache.conf filter +mutate convert config
+
+     filter {
+      grok {
+        match => { "message" => "%{HTTPD_COMBINEDLOG}"}
+      }
+  
+      mutate{
+        remove_field => [ "auth", "ident" ]
+        convert => { "bytes" => "integer" }
+        convert => { "response" => "integer" }
+      }
+     }
+    
+## logstash-apache.conf filter +date config  
+  
+    filter {
+      grok {
+        match => { "message" => "%{HTTPD_COMBINEDLOG}"}
+      }
+  
+      mutate{
+        remove_field => [ "auth", "ident" ]
+        convert => { "bytes" => "integer" }
+        convert => { "response" => "integer" }
+      }
+  
+      date{
+        match => ["timestamp","dd/MMM/yyyy:HH:mm:SS Z"]
+        target => "timestamp"
+      }
+    }
+
+## logstash-apache.conf filter +geoip config 
 
     filter {
       grok {
