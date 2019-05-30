@@ -54,11 +54,6 @@
       mutate{
         remove_field => [ "auth", "ident" ]
       }
-  
-      date{
-        match => ["timestamp","dd/MMM/yyyy:HH:mm:SS Z"]
-        target => "timestamp"
-      }
     }
     
 ## logstash-apache.conf filter +mutate convert config
