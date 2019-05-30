@@ -24,12 +24,16 @@
     
     input {
       file {
-        path => "/home/logst/logstash/apache-access.log"
+        path => "/home/elas/log_data/apache-access.log"
         start_position => "beginning"
         sincedb_path => "/dev/null"
       }
     }
     
+    output {
+        stdout{}
+    }
+
 ## logstash-apache.conf filter config
 
     filter {
