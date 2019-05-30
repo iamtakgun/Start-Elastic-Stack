@@ -42,5 +42,20 @@
 
 	  ./filebeat -e -c ./filebeat.yml
   
+  # Filebeat +logstash use
   
-  
+  ## logstash 수정
+	  input{
+	  	beats{
+		    port => 5044
+		}
+	  }
+	  
+	  output{
+	  	
+		index => "filebeat-logstash----"
+	  }
+
+  ## Filebeat 수정	
+  	output.elasticsearch 주석처리
+	output.logstash 활성화
