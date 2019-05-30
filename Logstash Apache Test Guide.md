@@ -5,10 +5,10 @@
     mkdir log_data
     cd log_data
     
-    vi apache-access.log
+    vi apache-sample.log
     83.149.9.216 - - [04/Jan/2015:05:13:42 +0000] "GET /presentations/logstash-monitorama-2013/images/kibana-search.png HTTP/1.1" 200   203023 "http://semicomplete.com/presentations/logstash-monitorama-2013/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.77 Safari/537.36"
 
-    wget https://github.com/iamtakgun/Start-Elastic-Stack/raw/master/sample/apache-access2.log
+    wget https://github.com/iamtakgun/Start-Elastic-Stack/raw/master/sample/apache-access.log
     
     
 ## logstash-apache.conf input config
@@ -19,7 +19,7 @@
     
     input {
       file {
-        path => "/home/elas/log_data/apache-access.log"
+        path => "/home/elas/log_data/apache-sample.log"
         start_position => "beginning"
         sincedb_path => "/dev/null"
       }
