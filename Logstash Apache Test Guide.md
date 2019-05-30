@@ -6,8 +6,8 @@
     cd log_data
     
     vi apache-sample.log
-    83.149.9.216 - - [04/Jan/2015:05:13:42 +0000] "GET /presentations/logstash-monitorama-2013/images/kibana-search.png HTTP/1.1" 200
-
+    50.16.19.13 - - [17/May/2015:10:05:10 +0000] "GET /blog/tags/puppet?flav=rss20 HTTP/1.1" 200 14872 "http://www.semicomplete.com/blog/tags/puppet?flav=rss20" "Tiny Tiny RSS/1.11 (http://tt-rss.org/)"
+    
     wget https://github.com/iamtakgun/Start-Elastic-Stack/raw/master/sample/apache-access.log
     
     
