@@ -1,16 +1,14 @@
 
 ## Apache Access Log Download
-
-    cd /home/elas/logstash6
     
-    wget https://github.com/iamtakgun/Start-Elastic-Stack/raw/master/sample/logs.gz
-    wget https://github.com/iamtakgun/Start-Elastic-Stack/raw/master/sample/logs2.gz
+    cd
+    mkdir log_data
+    cd log_data
     
-    gzip -d logs.gz
-    gzip -d logs2.gz
+    vi apache-access.log
     
-    mv logs apache-access.log
-    mv logs apache-access2.log
+    wget https://github.com/iamtakgun/Start-Elastic-Stack/raw/master/sample/apache-access2.log
+    
     
 ## logstash-apache.conf input config
     
