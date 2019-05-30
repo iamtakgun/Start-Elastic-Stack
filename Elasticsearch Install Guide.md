@@ -12,6 +12,8 @@
 	
 ## JAVA Download/Unzip : OpenJDK8
 	
+	wget https://github.com/ojdkbuild/contrib_jdk8u-ci/releases/download/jdk8u212-b04/jdk-8u212-ojdkbuild-linux-x64.zip
+	
 	sudo apt-get install unzip
 	unzip jdk-8u212-ojdkbuild-linux-x64.zip
 	mv jdk-8u212-ojdkbuild-linux-x64 jdk8
