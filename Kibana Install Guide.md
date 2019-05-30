@@ -3,7 +3,7 @@
 ## Kibana Download/Unzip
 
 	wget https://artifacts.elastic.co/downloads/kibana/kibana-6.7.2-linux-x86_64.tar.gz
-	tar kibana-6.7.2-linux-x86_64.tar.gz
+	tar -zxvf kibana-6.7.2-linux-x86_64.tar.gz
 
 ## Kibana Start
   
