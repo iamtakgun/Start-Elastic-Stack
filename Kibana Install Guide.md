@@ -7,7 +7,11 @@
 
 ## Kibana Start
   
-  	cd kibana-6.7.2-linux-x86_64
+  	cd kibana-6.7.2-linux-x86_64/config
+	vi kibana.yml
+	server.host: 0.0.0.0
+	
+	cd ..
   	bin/kibana &
   
 ## Kibana Check
