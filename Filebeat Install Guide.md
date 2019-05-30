@@ -8,27 +8,27 @@
 
 ## Filebeat modules.d use
 
-  cd /home/elas/filebeat6
+	  cd /home/elas/filebeat6
+
+	  ./filebeat -c ./filebeat.yml modules enable apache2
+
+	  ./filebeat -c ./filebeat.yml modules list
   
-  ./filebeat -c ./filebeat.yml modules enable apache2
+  	vi modules.d/apache2.yml
   
-  ./filebeat -c ./filebeat.yml modules list
-  
-  vi modules.d/apache2.yml
-  
-  - module: apache2
-  # Access logs
-  access:
-    enabled: true
-    # Set custom paths for the log files. If left empty,
-    # Filebeat will choose the paths depending on your OS.
-    var.paths: ["/home/elas/log_data/apache-access.log"]
-  # Error logs
-  error:
-    enabled: false
-    # Set custom paths for the log files. If left empty,
-    # Filebeat will choose the paths depending on your OS.
-    #var.paths:
+	  - module: apache2
+	  # Access logs
+	  access:
+	    enabled: true
+	    # Set custom paths for the log files. If left empty,
+	    # Filebeat will choose the paths depending on your OS.
+	    var.paths: ["/home/elas/log_data/apache-access.log"]
+	  # Error logs
+	  error:
+	    enabled: false
+	    # Set custom paths for the log files. If left empty,
+	    # Filebeat will choose the paths depending on your OS.
+	    #var.paths:
   
   cd ..
   
