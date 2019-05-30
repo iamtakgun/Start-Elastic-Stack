@@ -12,14 +12,10 @@
     mv logs apache-access.log
     mv logs apache-access2.log
     
-## Logstash Start
-
-    bin/logstash -f ./logstash-apache.conf --config.reload.automatic
-    
-    * --config.reload.automatic : 재기동 없이 conf 반영 
-
 ## logstash-apache.conf input config
-
+    
+    cd /home/elas/logstash6
+    
     vi logstash-apache.conf
     
     input {
@@ -34,6 +30,12 @@
         stdout{}
     }
 
+## Logstash Start
+
+    bin/logstash -f ./logstash-apache.conf --config.reload.automatic
+    
+    * --config.reload.automatic : 재기동 없이 conf 반영 
+    
 ## logstash-apache.conf filter config
 
     filter {
