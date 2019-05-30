@@ -33,13 +33,13 @@
   cd ..
   
   vi filebeat.yml
-  # Kibana
-  host: "localhost:5601"
+	  # Kibana
+	  host: "localhost:5601"
   
-  # kibana, Elasticsearch Setting
-  ./filebeat -e -c ./filebeat.yml setup --modules apache2
-  
-  ./filebeat -e -c ./filebeat.yml
+	  # kibana, Elasticsearch Setting
+	  ./filebeat -e -c ./filebeat.yml setup --modules apache2
+
+	  ./filebeat -e -c ./filebeat.yml
   
   
   
