@@ -41,3 +41,14 @@
 	curl http://localhost:9200
 	ps -ef | grep java
 	netstat -na | grep LISTEN | grep 9200
+	
+## Elasticsearch 웹브라우저에서 보기
+
+	sudo sysctl -w vm.max_map_count=262144
+
+	vi /home/elas/es00/config/elasticsearch.yml
+	network.host: 0.0.0.0
+	
+	cd /home/elas/es00
+	./start.sh
+	
