@@ -119,7 +119,7 @@
     output {
         elasticsearch{
             hosts => ["localhost:9200"]
-            index => "apache-access-logstash-%{+yyyy-mm-dd.hhmmss}"
+            index => "apache-access-logstash-%{+yyyy-mm-dd}"
         }
         
         stdout{}
