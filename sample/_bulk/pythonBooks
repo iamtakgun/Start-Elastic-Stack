@@ -1,32 +1,24 @@
 { "index" : { "_id" : "1" } }
-{ "title":"Python Crash Course: A Hands-On, Project-Based Introduction to Programming", "author":"Eric Matthes", "p
-ages":560}
+{ "title":"Python Crash Course: A Hands-On, Project-Based Introduction to Programming", "author":"Eric Matthes", "pages":560}
 { "index" : { "_id" : "2" } }
-{ "title":"A Smarter Way to Learn Python: Learn it faster. Remember it longer.", "author":"Mark Myers", "pages":238
-}
+{ "title":"A Smarter Way to Learn Python: Learn it faster. Remember it longer.", "author":"Mark Myers", "pages":238}
 { "index" : { "_id" : "3" } }
 { "title":"Learning Python, 5th Edition", "author":"Mark Lutz", "pages":1648}
 { "index" : { "_id" : "4" } }
 { "title":"Fluent Python: Clear, Concise, and Effective Programming", "author":"Luciano Ramalho", "pages":792}
 { "index" : { "_id" : "5" } }
-{ "title":"Automate the Boring Stuff with Python: Practical Programming for Total Beginners", "author":"Al Sweigart
-", "pages":504}
+{ "title":"Automate the Boring Stuff with Python: Practical Programming for Total Beginners", "author":"Al Sweigart", "pages":504}
 { "index" : { "_id" : "6" } }
-{ "title":"Python Crash Course, 2nd Edition: A Hands-On, Project-Based Introduction to Programming", "author":"Eric
- Matthes", "pages":544}
+{ "title":"Python Crash Course, 2nd Edition: A Hands-On, Project-Based Introduction to Programming", "author":"Eric Matthes", "pages":544}
 { "index" : { "_id" : "7" } }
-{ "title":"Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython", "author":"Wes McKinney", "pag
-es":550}
+{ "title":"Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython", "author":"Wes McKinney", "pages":550}
 { "index" : { "_id" : "8" } }
-{ "title":"Python: 3 Manuscripts in 1 book: - Python Programming For Beginners - Python Programming For Intermediat
-es - Python Programming for Advanced", "author":"Maurice J. Thompson", "pages":377}
+{ "title":"Python: 3 Manuscripts in 1 book: - Python Programming For Beginners - Python Programming For Intermediates - Python Programming for Advanced", "author":"Maurice J. Thompson", "pages":377}
 { "index" : { "_id" : "9" } }
-{ "title":"Python Programming: A Step By Step Guide From Beginner To Expert (Beginner, Intermediate & Advanced)", "
-author":"Anthony Brun", "pages":114}
+{ "title":"Python Programming: A Step By Step Guide From Beginner To Expert (Beginner, Intermediate & Advanced)", "author":"Anthony Brun", "pages":114}
 { "index" : { "_id" : "10" } }
 { "title":"Python Cookbook, Third edition", "author":"David Beazley, Brian K. Jones", "pages":706}
 { "index" : { "_id" : "11" } }
 { "title":"Learn Python", "author":"Shyam Bharath S.D.", "pages":114}
 { "index" : { "_id" : "12" } }
-{ "title":"LEARN PYTHON PROGRAMMING: Write code from scratch in a clear & concise way, with a complete basic course
-. From beginners to intermediate, an hands-on project with examples", "author":"WILLIAM GRAY", "pages":330}
+{ "title":"LEARN PYTHON PROGRAMMING: Write code from scratch in a clear & concise way, with a complete basic course. From beginners to intermediate, an hands-on project with examples", "author":"WILLIAM GRAY", "pages":330}
