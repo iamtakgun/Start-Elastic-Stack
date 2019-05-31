@@ -1,0 +1,20 @@
+cluster.name: my-application
+node.name: node-1
+
+network.host: 0.0.0.0
+
+http.port: 9200
+transport.tcp.port: 9300
+
+discovery.zen.ping.unicast.hosts: ["localhost:9300", "localhost:9310","localhost:9320"]
+
+# Prevent the "split brain" by configuring the majority of nodes (total number of master-eligible nodes / 2 + 1):
+discovery.zen.minimum_master_nodes: 2
+
+path.repo: ["/home/elas/backup"]
+
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+
+master.node: true
+node.data: true
