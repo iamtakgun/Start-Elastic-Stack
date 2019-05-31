@@ -102,7 +102,7 @@
       }
   
       date{
-        match => ["timestamp","dd/MMM/yyyy:HH:mm:SS Z"]
+        match => ["timestamp","dd/MMM/yyyy:HH:MM:SS Z"]
         target => "timestamp"
       }
   
